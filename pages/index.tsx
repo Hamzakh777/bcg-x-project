@@ -7,13 +7,6 @@ import { useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  useEffect(() => {
-    if(window !== undefined) {
-      fetch('api/users/1/appointments', {
-        method: 'GET'
-      })
-    }
-  }, [])
   return (
     <>
       <Head>

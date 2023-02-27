@@ -1,14 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@pp/styles/Home.module.css";
-import { useEffect } from "react";
 import useSWR, { Fetcher } from "swr";
 import { Appointment } from "@pp/utils";
 import { useRouter } from "next/router";
 import { List } from "@pp/components";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const fetcher: Fetcher<{ appointments: Appointment[] }, string> = (url) =>
   fetch(url, {
